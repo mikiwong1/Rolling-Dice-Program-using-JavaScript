@@ -18,6 +18,8 @@
         }
     </style>
      <script>
+
+        // creates the variables and assigned an id so in the HTML code it can be returned as JS object
         
         function initialize(){
             ouptuDiv = document.getElementById("output");
@@ -26,13 +28,17 @@
             sum = 0;
         }
         
+        // represents rolling function of die and addition of the numbers also calls display to show on document
+
         function roll(){
             dice1 = Math.floor( Math.random() * 6 ) +1;
             dice2 = Math.floor( Math.random() * 6 ) +1;
             sum = dice1 + dice2;
             display();
-
         }
+        
+        // informs how to show the number of the die and the sum
+        
         function display(){
             output.innerHTML = " Dice 1: " + dice1 + " Dice 2: " + dice2 + " Total: " + sum;
         }
