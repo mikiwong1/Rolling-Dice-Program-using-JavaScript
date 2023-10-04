@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(240, 145, 170, 0.875);
+            width: 350px;
+            height: 50px;
+            font-size: large;
+            font-style: oblique;
+        }
+    </style>
+     <script>
+        
+        function initialize(){
+            ouptuDiv = document.getElementById("output");
+            dice1 = 0;
+            dice2 = 0;
+            sum = 0;
+        }
+        
+        function roll(){
+            dice1 = Math.floor( Math.random() * 6 ) +1;
+            dice2 = Math.floor( Math.random() * 6 ) +1;
+            sum = dice1 + dice2;
+            display();
+
+        }
+        function display(){
+            output.innerHTML = " Dice 1: " + dice1 + " Dice 2: " + dice2 + " Total: " + sum;
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    
+    <button onclick="roll();">Roll</button>
+    <div id="output"></div>
+
+</body>
+</html>
