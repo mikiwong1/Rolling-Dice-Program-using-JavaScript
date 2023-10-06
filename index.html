@@ -5,49 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        button{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: rgba(240, 145, 170, 0.875);
-            width: 350px;
-            height: 50px;
-            font-size: large;
-            font-style: oblique;
-        }
-    </style>
-     <script>
-
-        // creates the variables and assigned an id so in the HTML code it can be returned as JS object
-        
-        function initialize(){
-            ouptuDiv = document.getElementById("output");
-            dice1 = 0;
-            dice2 = 0;
-            sum = 0;
-        }
-        
-        // represents rolling function of die and addition of the numbers also calls display to show on document
-
-        function roll(){
-            dice1 = Math.floor( Math.random() * 6 ) +1;
-            dice2 = Math.floor( Math.random() * 6 ) +1;
-            sum = dice1 + dice2;
-            display();
-        }
-        
-        // informs how to show the number of the die and the sum
-        
-        function display(){
-            output.innerHTML = " Dice 1: " + dice1 + " Dice 2: " + dice2 + " Total: " + sum;
-        }
-    </script>
 </head>
-<body onload="initialize();">
-    
-    <button onclick="roll();">Roll</button>
-    <div id="output"></div>
+<script>
 
+    function initialize(){
+        outputDIV = document.getElementById("output");
+        protienButton = document.getElementById("protienBtn")
+        display();
+        
+        appFat = 0;
+        appCarbs = 0;
+        appProtein = 0;
+        entFat = 0;
+        entCarbs = 0;
+        entProtein = 0;
+        desFat = 0;
+        appCarbs = 0;
+        appProtein = 0;
+    }
+
+    function clickResponse(){
+        outputDIV.innerHTML = 
+    }
+
+    function appAddProtein(){
+        appProtein ++;
+    }
+
+    function calcFat(){
+
+    }
+
+    function display(){
+        outputDIV.innerHTML = "Fat: " + appFat + " g" + "Carbohydrates: " + appCarbs + " g" + "Proteins: " + appProtein + " g";
+    }
+
+</script>
+<body onload="initialize();">
+    <h1>Welcome to Calorie Counter!</h1>
+    <h2>Appetizer Section</h2>
+    <button onclick="appAddProtein();display();">+ Protein</button>
+    <button onclick="display();">Click</button>
+    <p id="output"></p>
 </body>
 </html>
